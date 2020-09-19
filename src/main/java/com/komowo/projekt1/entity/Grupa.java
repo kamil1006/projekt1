@@ -13,11 +13,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
-
-
-
-
-
 @Entity
 @Table(name="GRUPY")
 public class Grupa {
@@ -28,20 +23,47 @@ public class Grupa {
 	@Column(name="id_grupy")
 	private String idGrupy;
 	
-	
 	@Column(name="nazwa")
 	private String nazwa;
 
-
 //---------------------------------------------------------------------------
-
 	@OneToMany(fetch=FetchType.LAZY,
 			mappedBy="grupa",
 			cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
 	private List<Zatrudnienie> zatrudnienie;
-
 //---------------------------------------------------------------------------
+	public Grupa() {
 
+	}
+
+	//---------------------------------------------------------------------------
+	public String getIdGrupy() {
+		return idGrupy;
+	}
+
+	public void setIdGrupy(String idGrupy) {
+		this.idGrupy = idGrupy;
+	}
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
+	}
+	//---------------------------------------------------------------------------
+
+	@Override
+	public String toString() {
+		return "Grupa{" +
+				"idGrupy='" + idGrupy + '\'' +
+				", nazwa='" + nazwa + '\'' +
+				'}';
+	}
+
+
+	//---------------------------------------------------------------------------
 
 
 }

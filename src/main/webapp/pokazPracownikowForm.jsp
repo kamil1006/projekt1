@@ -30,13 +30,12 @@
 	var="pracownicyLink" value="/pokazPracownikow">
 </c:url>
 
-<c:url var="deleteLink" value="/customer/delete">
-<c:param name="customerId" value="${tempCustomer.id}" />
-</c:url>
+
+
 
 
 <hr><hr>
-		<h2> Wybierz jedną z opcji</h1>
+		<h2> Wybierz jedną z opcji</h2>
 
 		<hr><hr>
 
@@ -51,19 +50,17 @@
 
 
 		</tr>
-		<tr>			<td>
+
+
+
+
+		<tr><td>
 			<input type="button" value="Pracownicy"
 			onClick="window.location.href='${pracownicyLink}'; return false;"
 			class="mod-button"/>
-		</td>
-		</tr>
-		<tr><td>
+		</td></tr>
 
-			<input type="button" value="grupy"
-			onClick="window.location.href='${deleteLink}'; return false;"
-			class="mod-button"/>
-			</td>
-		</tr>
+		
 
 
 		<tr><td>
