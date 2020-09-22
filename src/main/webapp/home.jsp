@@ -34,7 +34,17 @@
 	var="grupyLink" value="/pokazGrupy">
 </c:url>
 
+<c:url
+	var="medaleLink" value="/pokazMedale">
+</c:url>
 
+<c:url
+	var="stanowiskaLink" value="/pokazStanowiska">
+</c:url>
+
+<c:url
+	var="komorkiLink" value="/pokazKomorki">
+</c:url>
 
 <hr><hr>
 		<h2> Wybierz jedną z opcji</h2>
@@ -71,19 +81,20 @@
 
 		<tr><td>
         <input type="button" value="Medale"
-        onClick="window.location.href='${deleteLink}'; return false;"
+        onClick="window.location.href='${medaleLink}'; return false;"
 		class="mod-button"/>
-	</td>
+		</td>
+
 	</tr>
 	<tr><td>	
         <input type="button" value="Stanowiska"
-        onClick="window.location.href='${deleteLink}'; return false;"
+        onClick="window.location.href='${stanowiskaLink}'; return false;"
 		class="mod-button"/>
 	</td>
 	</tr>
 	<tr><td>	
         <input type="button" value="Komórki"
-        onClick="window.location.href='${deleteLink}'; return false;"
+        onClick="window.location.href='${komorkiLink}'; return false;"
 		class="mod-button"/>
 	</td></tr>
 

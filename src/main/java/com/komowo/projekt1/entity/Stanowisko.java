@@ -18,5 +18,41 @@ public class Stanowisko {
 	@Column(name="nazwa")
 	private String nazwa;
 	//---------------------------------------------------------------------------
+
+	public Stanowisko() {
+	}
+
+
+	//---------------------------------------------------------------------------
+
+	public String getIdStanowiska() {
+		return idStanowiska;
+	}
+
+	public void setIdStanowiska(String idStanowiska) {
+		this.idStanowiska = idStanowiska;
+	}
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
+	}
+
+
+	//---------------------------------------------------------------------------
+
+	@Override
+	public String toString() {
+		return "Stanowisko{" +
+				"idStanowiska='" + idStanowiska + '\'' +
+				", nazwa='" + nazwa + '\'' +
+				'}';
+	}
+
+
+	//---------------------------------------------------------------------------
 	
 }

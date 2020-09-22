@@ -59,7 +59,86 @@ public class Zatrudnienie {
 	@ManyToOne(cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
 	@JoinColumn(name="nr_kadrowy")
 	private Pracownik pracownik;
+	//---------------------------------------------------------------------------
 
+	public Zatrudnienie() {
+	}
+	//---------------------------------------------------------------------------
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Date getDataOd() {
+		return dataOd;
+	}
+
+	public void setDataOd(Date dataOd) {
+		this.dataOd = dataOd;
+	}
+
+	public Date getDataDo() {
+		return dataDo;
+	}
+
+	public void setDataDo(Date dataDo) {
+		this.dataDo = dataDo;
+	}
+
+	public int getWymiarEtatu() {
+		return wymiarEtatu;
+	}
+
+	public void setWymiarEtatu(int wymiarEtatu) {
+		this.wymiarEtatu = wymiarEtatu;
+	}
+
+	public Komorka getKomorka() {
+		return komorka;
+	}
+
+	public void setKomorka(Komorka komorka) {
+		this.komorka = komorka;
+	}
+
+	public Grupa getGrupa() {
+		return grupa;
+	}
+
+	public void setGrupa(Grupa grupa) {
+		this.grupa = grupa;
+	}
+
+	public Stanowisko getStanowisko() {
+		return stanowisko;
+	}
+
+	public void setStanowisko(Stanowisko stanowisko) {
+		this.stanowisko = stanowisko;
+	}
+
+	public Pracownik getPracownik() {
+		return pracownik;
+	}
+
+	public void setPracownik(Pracownik pracownik) {
+		this.pracownik = pracownik;
+	}
+//---------------------------------------------------------------------------
+
+	@Override
+	public String toString() {
+		return "Zatrudnienie{" +
+				"id=" + id +
+				", dataOd=" + dataOd +
+				", dataDo=" + dataDo +
+				", wymiarEtatu=" + wymiarEtatu +
+				'}';
+	}
 
 
 	//---------------------------------------------------------------------------

@@ -16,7 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
-@Entity//(name="grupy")
+@Entity//(name="komorka")
 @Table(name="KOMORKI")
 public class Komorka {
 	
@@ -45,8 +45,76 @@ public class Komorka {
 			mappedBy="komorka",
 			cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
 	private List<Zatrudnienie> zatrudnienie;
-
-
-
 	//---------------------------------------------------------------------------
+
+	public Komorka() {
+	}
+//---------------------------------------------------------------------------
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getSymbol() {
+		return symbol;
+	}
+
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
+	}
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
+	}
+
+	public String getGrupowanie() {
+		return grupowanie;
+	}
+
+	public void setGrupowanie(String grupowanie) {
+		this.grupowanie = grupowanie;
+	}
+
+	public String getPodlegloscSymbol() {
+		return podlegloscSymbol;
+	}
+
+	public void setPodlegloscSymbol(String podlegloscSymbol) {
+		this.podlegloscSymbol = podlegloscSymbol;
+	}
+//---------------------------------------------------------------------------
+
+	public List<Zatrudnienie> getZatrudnienie() {
+		return zatrudnienie;
+	}
+
+	public void setZatrudnienie(List<Zatrudnienie> zatrudnienie) {
+		this.zatrudnienie = zatrudnienie;
+	}
+
+
+//---------------------------------------------------------------------------
+
+	@Override
+	public String toString() {
+		return "Komorka{" +
+				"id=" + id +
+				", symbol='" + symbol + '\'' +
+				", nazwa='" + nazwa + '\'' +
+				", grupowanie='" + grupowanie + '\'' +
+				", podlegloscSymbol='" + podlegloscSymbol + '\'' +
+				'}';
+	}
+
+
+//---------------------------------------------------------------------------
+
 }

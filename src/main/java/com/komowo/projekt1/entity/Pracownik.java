@@ -65,8 +65,79 @@ public class Pracownik {
 
 	public Pracownik() {
 	}
+	//---------------------------------------------------------------------------
+
+	public String getNrKadrowy() {
+		return nrKadrowy;
+	}
+
+	public void setNrKadrowy(String nrKadrowy) {
+		this.nrKadrowy = nrKadrowy;
+	}
+
+	public String getNazwisko() {
+		return nazwisko;
+	}
+
+	public void setNazwisko(String nazwisko) {
+		this.nazwisko = nazwisko;
+	}
+
+	public String getImie() {
+		return imie;
+	}
+
+	public void setImie(String imie) {
+		this.imie = imie;
+	}
+
+	public int getPesel() {
+		return pesel;
+	}
+
+	public void setPesel(int pesel) {
+		this.pesel = pesel;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public Date getDataWpisu() {
+		return dataWpisu;
+	}
+
+	public void setDataWpisu(Date dataWpisu) {
+		this.dataWpisu = dataWpisu;
+	}
+	//---------------------------------------------------------------------------
+
+	public PracownikDodatkowe getPracownikDodatkowe() {
+		return pracownikDodatkowe;
+	}
+
+	public void setPracownikDodatkowe(PracownikDodatkowe pracownikDodatkowe) {
+		this.pracownikDodatkowe = pracownikDodatkowe;
+	}
+
+	//---------------------------------------------------------------------------
+	@Override
+	public String toString() {
+		return "Pracownik{" +
+				"nrKadrowy='" + nrKadrowy + '\'' +
+				", nazwisko='" + nazwisko + '\'' +
+				", imie='" + imie + '\'' +
+				", pesel=" + pesel +
+				", mail='" + mail + '\'' +
+				", dataWpisu=" + dataWpisu +
+				'}';
+	}
 
 
 	//---------------------------------------------------------------------------
-	
+
 }
