@@ -48,6 +48,7 @@ public class ThirdController {
         model.addAttribute("komorka2",komorka);
         model.addAttribute("komorka2Zatrudnienie",zatrudnienie);
 
+
         return "pokazKomorkaZatrudnienieForm";
     }
     //---------------------------------------------------
